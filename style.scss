@@ -1,0 +1,62 @@
+// Set the Stage
+body { 
+   background: #EFEFEF;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.wrapper {
+  margin: 30px;
+  padding: 30px;
+  background: #fff;
+  width: 360px;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-cell {
+   display: flex;
+   margin-bottom: 20px;
+}
+
+// Animation
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 308px 0
+    }
+}
+
+.animated-background {
+   animation-duration: 2.0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #EFEFEF;
+    background: linear-gradient(to right, #EFEFEF 0%, #CDCDCD 50%, #EFEFEF 100%);
+    background-size: 800px 204px;
+    height: 96px;
+    position: relative;
+}
+
+// Page Elements
+
+.text-line {
+  height: 23px;
+  width: 360px;
+  margin: 15px 0;
+  @extend .animated-background;
+}
+
+.text-line-short {
+  height: 23px;
+  width: 300px;
+  margin: 15px 0;
+  @extend .animated-background;
+}
+
